@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Moyenne</title>
+    <link rel="stylesheet" href="12style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .note {
+            width: 50px;
+            margin: 5px;
+        }
+
+      footer{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .copyright{
+      font-size: 14px;
+      opacity: 0,8;
+
+    }
+    .copyright:hover{
+      opacity: 1;
+      transition: opacity 0,3
+      ease-in-out ;
+    }
+      table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #161616;
+}
+
+th {
+  background-color: #dd6262;
+}
+
+tr{
+  background-color: #cfadad;
+}
+@media only screen and (max-width: 600px) {
+    
+    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    
+    @media only screen and (min-width: 1025px) {
+    
+}
+}
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+          <a href="11index.html"><img src="ESGIS Photo.jpeg" alt="Logo" class="logo"></a>
+          <h1>BIENVENUE SUR NOTRE SITE DE GROUPE</h1>
+        </div>
+        <nav>
+          <a href="9formulaire.html">FORMULAIRE</a>
+          <a href="10contact.html">CONCTACT</a>
+        </nav>
+    </header>
+
+
+    <h1>Calcul de Moyenne</h1>
+
+   
+    <label for="matiere1">MATHS:</label>
+    <input type="number" id="matiere1" class="note">
+    <br>
+
+    <label for="matiere2">PCT:</label>
+    <input type="number" id="matiere2" class="note">
+    <br>
+
+    <label for="matiere3">SVT:</label>
+    <input type="number" id="matiere3" class="note">
+    <br>
+
+    <label for="matiere4">Français:</label>
+    <input type="number" id="matiere4" class="note">
+    <br>
+
+    <label for="matiere5">Anglais:</label>
+    <input type="number" id="matiere5" class="note">
+    <br>
+
+    <label for="matiere6">Histoire:</label>
+    <input type="number" id="matiere6" class="note">
+    <br>
+
+    <label for="matiere7">EPS:</label>
+    <input type="number" id="matiere7" class="note">
+    <br>
+   
+
+    <button onclick="calculerMoyenne()">Calculer Moyenne</button>
+    <p id="resultat"></p>
+
+    <script>
+        function calculerMoyenne() {
+            
+            let note1 = parseFloat(document.getElementById("matiere1").value);
+            let note2 = parseFloat(document.getElementById("matiere2").value);
+            let note3 = parseFloat(document.getElementById("matiere3").value);
+            let note4 = parseFloat(document.getElementById("matiere4").value);
+            let note5 = parseFloat(document.getElementById("matiere5").value);
+            let note6 = parseFloat(document.getElementById("matiere6").value);
+            let note7 = parseFloat(document.getElementById("matiere7").value);
+
+           
+            if (isNaN(note1) || isNaN(note2) || isNaN(note3) || isNaN(note4) || isNaN(note5) || isNaN(note6) || isNaN(note7)) {
+                alert("Veuillez entrer des notes valides pour toutes les matières.");
+                return;
+            }
+
+            
+            let moyenne = (note1 + note2 + note3 + note4 + note5 + note6 + note7) / 7;
+
+            
+            document.getElementById("resultat").innerHTML = "Moyenne: " + moyenne.toFixed(2);
+        }
+    </script>
+    <footer>
+        <div class="copyright">
+          <p>
+            @COPYRIGHT; 2024 SITE WEB
+          </p>
+    
+        </div>
+      </footer>
+</body>
+</html>
